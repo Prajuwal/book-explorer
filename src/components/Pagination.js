@@ -17,9 +17,9 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       </span>
       <button
         onClick={() => onPageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
+        disabled={currentPage === totalPages || totalPages === 0} // Disable next button if totalPages is 0
         className={`${
-          currentPage === totalPages
+          currentPage === totalPages || totalPages === 0
             ? "bg-gray-300 cursor-not-allowed"
             : "bg-indigo-500"
         } text-white px-4 py-2 rounded-r-md`}

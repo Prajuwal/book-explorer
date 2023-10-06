@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "../index.css";
+
 const Search = ({ onSearch }) => {
   const [query, setQuery] = useState("");
 
   const handleSearch = () => {
     onSearch(query);
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
   };
 
   return (
@@ -15,6 +22,7 @@ const Search = ({ onSearch }) => {
         className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onKeyPress={handleKeyPress} // Add this line to handle Enter key press
       />
       <button
         onClick={handleSearch}
