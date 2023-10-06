@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 const Filter = ({ onFilter }) => {
-  const [selectedFilter, setSelectedFilter] = useState(""); // State to track selected filter
+  const [selectedFilter, setSelectedFilter] = useState(""); 
 
   const handleFilterChange = (e) => {
     const newFilter = e.target.value;
     setSelectedFilter(newFilter);
-    onFilter(newFilter); // Notify the parent component about the selected filter
+    onFilter(newFilter); 
   };
 
   return (

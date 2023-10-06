@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
 const Sort = ({ onSort }) => {
-  const [selectedSort, setSelectedSort] = useState("titleAsc"); // Default sort option
+  const [selectedSort, setSelectedSort] = useState("titleAsc"); 
 
   const handleSortChange = (e) => {
     const newSortOption = e.target.value;
     setSelectedSort(newSortOption);
-    onSort(newSortOption); // Notify the parent component about the selected sort option
+    onSort(newSortOption); 
   };
 
   return (

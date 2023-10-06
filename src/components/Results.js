@@ -1,7 +1,6 @@
 import React from "react";
-import "../index.css";
 
-const Results = ({ results }) => {
+const Results = ({ results, onEdit }) => {
   return (
     <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {results.length === 0 ? (
@@ -31,6 +30,12 @@ const Results = ({ results }) => {
               </p>
               <p className="text-gray-700">Pages: {book.pages}</p>
               <p className="text-gray-700">Year: {book.year}</p>
+              <button
+                onClick={() => onEdit(book.id)} // Pass the book id to onEdit
+                className="px-4 py-2 bg-indigo-500 text-white rounded-lg mt-2"
+              >
+                Edit
+              </button>
             </div>
           </div>
         ))

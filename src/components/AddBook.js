@@ -23,17 +23,17 @@ const AddBook = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Generate a random ID for the new book (between 1 and 1000)
+    
     const randomId = Math.floor(Math.random() * 1000) + 1;
 
-    const newBook = { ...formData, id: randomId }; // Include the generated ID
+    const newBook = { ...formData, id: randomId }; 
 
     try {
       await axios.post(
         "http://68.178.162.203:8080/application-test-v1.1/books",
         newBook
       );
-      onClose(); // Close the modal after successful addition
+      onClose(); 
     } catch (error) {
       console.error(error);
     }
@@ -51,7 +51,7 @@ const AddBook = ({ onClose }) => {
               name="title"
               value={formData.title}
               onChange={handleChange}
-              required // Title is a required field
+              required 
               className="mt-1 w-full rounded-md border-black border-2 transition duration-300 focus:border-green-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             />
           </div>

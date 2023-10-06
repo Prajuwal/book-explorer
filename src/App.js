@@ -64,8 +64,8 @@ const App = () => {
   };
 
   const handleEditBookClick = (bookId) => {
-    setIsEditingBook(true);
     setEditBookId(bookId);
+    setIsEditingBook(true);
   };
 
   const handleEditBookClose = () => {
@@ -120,7 +120,10 @@ const App = () => {
         </div>
       </div>
 
-      <Results results={sortedAndFilteredResults} />
+      <Results
+        results={sortedAndFilteredResults}
+        onEdit={handleEditBookClick}
+      />
 
       <Pagination
         currentPage={pagination.currentPage}

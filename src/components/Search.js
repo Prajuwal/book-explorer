@@ -22,7 +22,7 @@ const Search = ({ onSearch }) => {
         className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-indigo-500"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        onKeyPress={handleKeyPress} // Add this line to handle Enter key press
+        onKeyPress={handleKeyPress} 
       />
       <button
         onClick={handleSearch}
