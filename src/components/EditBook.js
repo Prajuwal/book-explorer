@@ -13,7 +13,7 @@ const EditBook = ({ bookId, onClose }) => {
   });
 
   useEffect(() => {
-    // Fetch the book data based on bookId when the component mounts
+   
     const fetchBookData = async () => {
       try {
         const response = await axios.get(

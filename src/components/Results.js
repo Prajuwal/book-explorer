@@ -31,7 +31,7 @@ const Results = ({ results, onEdit }) => {
               <p className="text-gray-700">Pages: {book.pages}</p>
               <p className="text-gray-700">Year: {book.year}</p>
               <button
-                onClick={() => onEdit(book.id)} // Pass the book id to onEdit
+                onClick={() => onEdit(book.id)} 
                 className="px-4 py-2 bg-indigo-500 text-white rounded-lg mt-2"
               >
                 Edit

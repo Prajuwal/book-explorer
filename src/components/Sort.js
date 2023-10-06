@@ -23,7 +23,7 @@ const Sort = ({ onSort }) => {
         <option value="authorDesc">Author (Z-A)</option>
         <option value="pagesAsc">Number of Pages (Ascending)</option>
         <option value="pagesDesc">Number of Pages (Descending)</option>
-        {/* Add more sort options as needed */}
+     
       </select>
     </div>
   );

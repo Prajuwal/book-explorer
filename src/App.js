@@ -5,8 +5,8 @@ import Pagination from "./components/Pagination";
 import Search from "./components/Search";
 import Filter from "./components/Filter";
 import Sort from "./components/Sort";
-import AddBook from "./components/AddBook"; // Import the AddBook component
-import EditBook from "./components/EditBook"; // Import the EditBook component
+import AddBook from "./components/AddBook"; 
+import EditBook from "./components/EditBook";
 import "./index.css";
 
 const App = () => {
@@ -17,10 +17,10 @@ const App = () => {
     pageSize: 25,
   });
   const [countryFilter, setCountryFilter] = useState("");
-  const [sortOption, setSortOption] = useState("titleAsc"); // Default sort option
-  const [isAddingBook, setIsAddingBook] = useState(false); // Track Add Book modal visibility
-  const [isEditingBook, setIsEditingBook] = useState(false); // Track Edit Book modal visibility
-  const [editBookId, setEditBookId] = useState(null); // Store the ID of the book to edit
+  const [sortOption, setSortOption] = useState("titleAsc");
+  const [isAddingBook, setIsAddingBook] = useState(false); 
+  const [isEditingBook, setIsEditingBook] = useState(false); 
+  const [editBookId, setEditBookId] = useState(null);
 
   const fetchBooks = async (page, title) => {
     try {
@@ -73,7 +73,6 @@ const App = () => {
     setEditBookId(null);
   };
 
-  // Client-side sorting function
   const sortResults = (results, sortOption) => {
     const sortedResults = [...results];
     if (sortOption === "titleAsc") {
