@@ -87,12 +87,12 @@ const App = () => {
     return sortedResults;
   };
 
-  const filteredResults = searchResults.filter((book) => {
-    return (
-      countryFilter === "" ||
-      book.country.toLowerCase() === countryFilter.toLowerCase()
-    );
-  });
+ const filteredResults = (searchResults || []).filter((book) => {
+   return (
+     countryFilter === "" ||
+     book.country.toLowerCase() === countryFilter.toLowerCase()
+   );
+ });
 
   const sortedAndFilteredResults = sortResults(filteredResults, sortOption);
 
